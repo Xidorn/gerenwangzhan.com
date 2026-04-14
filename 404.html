@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - 页面不存在</title>
+  <meta name="description" content="抱歉，你访问的页面不存在，系统将在 20 秒后自动跳转到 王先生个人网站 首页。" />
+  <meta name="keywords" content="404,页面不存在,王先生个人网站" />
+  <meta name="author" content="王先生" />
+  <meta name="application-name" content="王先生个人网站" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no,email=no,address=no" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="color-scheme" content="light" />
+  <link rel="canonical" href="https://www.gerenwangzhan.com/404.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:site_name" content="王先生个人网站" />
+  <meta property="og:title" content="404 - 页面不存在" />
+  <meta property="og:description" content="抱歉，你访问的页面不存在，系统将在 20 秒后自动跳转到 王先生个人网站 首页。" />
+  <meta property="og:url" content="https://www.gerenwangzhan.com/404.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="404 - 页面不存在" />
+  <meta name="twitter:description" content="抱歉，你访问的页面不存在，系统将在 20 秒后自动跳转到 王先生个人网站 首页。" />
+  <link rel="stylesheet" href="/static/style.css" />
+  
+</head>
+<body class="page-404">
+  <div class="page-404-wrap">
+    <div class="page-404-card">
+      <div class="eyebrow">404 Not Found</div>
+      <div class="page-404-code">404</div>
+      <h1 class="page-404-title">抱歉，这个页面不存在</h1>
+      <p class="page-404-desc">你访问的链接可能已经失效、地址输入有误，或者页面已被重新整理。系统将在 <strong>20 秒</strong> 后自动跳转到 <strong>www.wangxiansheng.com</strong> 首页。</p>
+      <div class="page-404-countdown">剩余 <strong id="count">20</strong> 秒后自动跳转到 <strong>www.wangxiansheng.com</strong></div>
+      <div class="page-404-actions">
+        <a class="btn-primary" href="https://www.gerenwangzhan.com/">返回个人网站首页</a>
+        <a class="btn-light" href="https://www.wangxiansheng.com" target="_blank" rel="noopener noreferrer">访问官方官网</a>
+      </div>
+    </div>
+    <div class="footer">
+      © <span id="year"></span> <a href="https://www.wangxiansheng.com/">王先生</a> 版权所有
+    </div>
+  </div>
+  <script>
+    const targetUrl = 'https://www.wangxiansheng.com/';
+    let seconds = 20;
+    const countEl = document.getElementById('count');
+    const yearEl = document.getElementById('year');
+    yearEl.textContent = new Date().getFullYear();
+    const timer = setInterval(() => {
+      seconds -= 1;
+      countEl.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = targetUrl;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
