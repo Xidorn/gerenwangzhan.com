@@ -273,7 +273,7 @@ img { max-width: 100%; display: block; }
 .process-grid { grid-template-columns: repeat(3, 1fr); }
 .grid-4,
 .metrics { grid-template-columns: repeat(4, 1fr); }
-.hero .metrics { margin-top: 28px; }
+.hero .metrics { margin-top: 40px; }
 .contact-layout { grid-template-columns: 1.08fr 0.92fr; }
 .field-grid-2 { grid-template-columns: 1fr 1fr; }
 .section { margin-top: 20px; }
